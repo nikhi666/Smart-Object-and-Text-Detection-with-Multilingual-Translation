@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NNN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+  </head>
+  <body>
+    <!-- header section -->
+    <section class="header">
+      <div class="header-container">
+        <div class="header-logo">
+          <h1>NNN</h1>
+        </div>
+        <div class="header-menu">
+          <ul class="links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="./#about">ABOUT</a></li>
+            <li><a href="./#features">FEATURES</a></li>
+            <li><a href="./#contact">CONTACT</a></li>
+          </ul>
+          <!-- mobile version toggle button -->
+          <ul class="toggle">
+            <li class="menu-toggle">
+              <span class="top"></span> <span class="bottom"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-banner">
+        <h2>
+          Smart Object & <span>Text Detection</span> With Multilingual
+          Translation
+        </h2>
+        <p class="par">
+          Discover the power of our website's advanced object and text detection
+          in images. Break language barriers, gain valuable insights, and
+          explore endless possibilities. Experience seamless analysis and
+          translation with our user-friendly platform. Maximize the potential of
+          your images today!
+        </p>
+        <button class="cn"><a href="#upload">Start now</a></button>
+      </div>
+    </section>
+    <!-- header section ends -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <h2>About Us<span>WELCOME</span></h2>
+
+        <p>
+          
+Welcome to our website! We specialize in object and text detection with multilingual translation. Our cutting-edge technology allows you to upload or capture images and accurately identify the objects present within them. Whether you're a language learner, a professional translator, or someone interested in image analysis, our platform is designed to cater to your needs.
+
+Using state-of-the-art machine learning algorithms, we detect objects and text in images with high precision. Our system provides you with a comprehensive list of the objects recognized in the image, enabling you to gain valuable insights and extract relevant information.
+
+But that's not all. We also offer multilingual translation services. With just a click, you can translate any text present in the image into your preferred language. This feature is particularly useful for language learners who want to practice reading and understanding foreign text or for professionals who need quick and accurate translations.
+
+Our user-friendly interface ensures a seamless experience. Simply upload an image or capture one using your device's camera. Select the desired language for translation, and let our powerful algorithms do the rest. You'll receive prompt results with detected objects and translated text displayed on the screen.
+
+Whether you're exploring new languages, working on translation projects, or analyzing images for research purposes, our object and text detection with multilingual translation services will provide you with the tools you need. Experience the power of our platform and unlock new possibilities today!
+        </p>
+      </div>
+    </section>
+    <!-- about sections ends -->
+
+    <!-- file upload section starts  -->
+    <section class="fileUpload" id="upload">
+      <label for="images" class="drop-container">
+        <span class="drop-title">Drop files here</span>
+        or
+        <input type="file" name="image" id="imageInput" accept="image/jpeg, image/png" required>
+      </label>
+      <button class="button button2" onclick="validate()">Submit</button>
+    </section>
+    <section class="fileoutput" id="output">
+      <div id="object"></div>
+      <div id="landmark"></div>
+      <div id="fulltext">
+        <div id="extractedtext"></div>
+      </div>
+      <div id="translationResult"></div>
+    </section>
+<!-- file upload end -->
+    <!-- FEATURES section starts -->
+    <section class="features" id="features">
+      <div class="features-container">
+        <h2>features</h2>
+        <div class="features">
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>Multiple object recognition</h3>
+            <p>
+               Accurately detect and identify multiple objects within an image, providing valuable insights and information.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>Text recognition</h3>
+            <p>
+              Identify and extract text from images, enabling you to analyze and process textual information within visual content.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>Text Translation</h3>
+            <p>
+               Seamlessly translate detected text into different languages, breaking down language barriers and facilitating cross-cultural communication.
+          </div>
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>Text to Speech Translation</h3>
+            <p>
+              Transform written text into lifelike speech for improved accessibility and user engagement. Enhance your applications with the power of voice and provide a seamless audio experience.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>Landmark Detection</h3>
+            <p>
+              Identify and recognize famous landmarks in images, adding context and enriching your visual content. Enhance your travel, tourism, and location-based applications with accurate landmark detection capabilities.
+            </p>
+          </div>
+          <div class="feature">
+            <div class="logo">
+              <img src="images/logo/object-recognition.png" alt="" />
+            </div>
+            <h3>object recognition</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus iure inventore quidem libero, ab sunt?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FEATURES section ends  -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+      <!-- team -->
+      <div class="text-center">
+        <h2>Contact Us</h2>
+        <h3 class="text-uppercase">Our Team</h3>
+        <p class="p-top-30 half-txt">"Together, we are a powerhouse of talent, passion, and determination, united in our commitment to delivering exceptional results and making a lasting impact."</p>
+      </div>
+      <div class="container">
+        
+    
+        <div class="team-member">
+          <div class="team-img">
+            <img src="images/demo.jpg" alt="team member">
+          </div>
+          <div class="team-hover">
+            <div class="desk">
+              <h4>Hello World</h4>
+              <p>I love to introduce myself as a Backend Developer.</p>
+            </div>
+            <div class="s-link">
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Nikhil</h5>
+            <span>Backend Developer</span>
+          </div>
+        </div>
+    
+        <div class="team-member">
+          <div class="team-img">
+            <img src="images/demo.jpg" alt="team member">
+          </div>
+          <div class="team-hover">
+            <div class="desk">
+              <h4>Hi There!</h4>
+              <p>I love to introduce myself as a hardcore UI/UX Designer.</p>
+            </div>
+            <div class="s-link">
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+              <a href=""
+                ><img src="images/facebook 1.png" alt=""
+               /></a>
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Nikhilesh</h5>
+            <span>UI/UX Designer</span>
+          </div>
+        </div>
+    
+        <div class="team-member">
+          <div class="team-img">
+            <img src="images/demo.jpg" alt="team member">
+          </div>
+          <div class="team-hover">
+            <div class="desk">
+              <h4>I love to design</h4>
+              <p>I love to introduce myself as a hardcore Web Designer.</p>
+            </div>
+            <div class="s-link">
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+                <a href=""
+                ><img src="images/facebook 1.png" alt=""
+              /></a>
+              <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+            </div>
+          </div>
+          <div class="team-title">
+            <h5>Nikhshitha</h5>
+            <span>Web Designer</span>
+          </div>
+        </div>
+      </div>
+      <!-- team ends -->
+      <div class="new_home_web">
+        <div class="responsive-container-block big-container">
+          <img class="imgBG" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/aw65.png">
+          <div class="responsive-container-block textContainer">
+            <div class="topHead">
+              <p class="text-blk heading">
+                Get in
+                <span class="orangeText">
+                  touch
+                </span>
+              </p>
+              <div class="orangeLine" id="w-c-s-bgc_p-2-dm-id">
+              </div>
+            </div>
+            <p class="text-blk subHeading">
+              We love your feedback
+            </p>
+          </div>
+          <div class="responsive-container-block container">
+            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-10 line" id="i69b">
+              <form class="form-box">
+                <div class="container-block form-wrapper">
+                  <div class="responsive-container-block">
+                    <div class="left4">
+                      <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6" id="i10mt-2">
+                        <input class="input" id="ijowk-2" name="FirstName" placeholder="First Name">
+                      </div>
+                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                        <input class="input" id="indfi-2" name="Last Name" placeholder="Last Name">
+                      </div>
+                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                        <input class="input" id="ipmgh-2" name="Email" placeholder="Email Address">
+                      </div>
+                      <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 lastPhone">
+                        <input class="input" id="imgis-2" name="PhoneNumber" placeholder="Phone Number">
+                      </div>
+                    </div>
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-2">
+                      <textarea class="textinput" id="i5vyy-2" placeholder="Message"></textarea>
+                    </div>
+                  </div>
+                  <a class="send" href="#" id="w-c-s-bgc_p-1-dm-id">
+                    Send
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section ends  -->
+
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-topLeft">
+            <h1>NNN</h1>
+          </div>
+          <div class="footer-topRight">
+            <div class="topRight-box">
+              <h3>Visit Link</h3>
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="./#about">ABOUT</a></li>
+                <li><a href="./#features">FEATURES</a></li>
+                <li><a href="./#contact">CONTACT</a></li>
+              </ul>
+            </div>
+            <div class="topRight-box">
+              <h3>Contact</h3>
+              <ul>
+                <li><a href="#">+91 99999 99999</a></li>
+                <li><a href="#">nnn@gmail.com</a></li>
+              </ul>
+            </div>
+            <div class="topRight-box">
+              <h3>Address</h3>
+              <ul>
+                <li>
+                  <a href="#">xyz street, qwerty road, asdf city. 000000</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="bottom-social">
+            <ul>
+              <li>
+                <a href=""
+                  ><img src="images/facebook 1.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="images/instagram 1.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="images/linkedin 1.png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
